@@ -3,16 +3,15 @@ import { describe, it, expect } from 'vitest'
 import App from './App'
 
 describe('App', () => {
-  it('renders Hello World heading', () => {
+  it('renders the input', () => {
     render(<App />)
-    const heading = screen.getByRole('heading', { name: /hello world/i })
-    expect(heading).toBeInTheDocument()
+    const input = screen.getByPlaceholderText("(555) 555-5555")
+    expect(input).toBeInTheDocument()
   })
 
-  it('renders the main div container', () => {
+  it('renders the button submit', () => {
     render(<App />)
-    const container = screen.getByRole('heading').parentElement
-    expect(container).toBeInTheDocument()
-    expect(container?.tagName).toBe('DIV')
+    const button = screen.getByRole('button', { name: /submit/i })
+    expect(button).toBeInTheDocument()
   })
 })

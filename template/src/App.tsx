@@ -3,7 +3,14 @@ import './App.css'
 function App() {
   return (
     <div>
-      <h1>Hello World</h1>
+      <input
+        type="tel"
+        name="tel"
+        placeholder="(555) 555-5555"
+        id="tel"
+        required
+      />
+      <button>Submit</button>
     </div>
   )
 }
